@@ -9,16 +9,30 @@ For instructrions on how to use the MySQL Workbench, see https://www.youtube.com
 
 ## Exercise #1: Create a DB and insert data
 
+Create a new schema called myDB. Use this schema in the following commands.
+
+``` sql
+use myDB;
+```
+
 Create employee table
 
 ``` sql
-CREATE TABLE employee (ID, name, salary, departmentID);
+CREATE TABLE employee (
+   ID INT,
+   name VARCHAR(50),
+   salary INT,
+   departmentID SMALLINT
+);
 ```
 
 Create department table
 
 ``` sql
-CREATE TABLE department (ID, name);
+CREATE TABLE department (
+   ID INT,
+   name VARCHAR(50)
+);
 ```
 
 Insert departments
