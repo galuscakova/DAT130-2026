@@ -1,9 +1,11 @@
 # SQL exercises, Part I. (create and select)
 
 ### Install and use MySQL Workbench
-Instructions for Windows
-Instructions for MacOS
-Instructions for Linux
+[Instructions for Windows](https://github.com/galuscakova/DAT130-2026/blob/bc32b2962ebb9055f136cdafb9d7b11929b0765a/M2/Installation-guides/Install%20MySQL%20for%20Windows.docx)
+
+[Instructions for MacOS](https://github.com/galuscakova/DAT130-2026/blob/bc32b2962ebb9055f136cdafb9d7b11929b0765a/M2/Installation-guides/Install%20MySQL%20for%20macOS.docx)
+
+[Instructions for Linux](https://github.com/galuscakova/DAT130-2026/blob/bc32b2962ebb9055f136cdafb9d7b11929b0765a/M2/Installation-guides/Install%20MySQL%20for%20Linux.docx)
 
 For instructrions on how to use the MySQL Workbench, see https://www.youtube.com/watch?v=2mbHyB2VLYY
 
@@ -71,7 +73,7 @@ SELECT * FROM employee;
 
     2.4 UPDATE the salary of all employees in department 0 with 5%.
 
-    2.5 Refresh the page, this should remove everything. Now create the tables again, but include a column in the department table, that shows the employeeId of a deparment manager.
+    2.5 Include an additional column in the department table, that shows the employeeId of a deparment manager.
 
 
 Based on https://github.com/dat310-2025/info/blob/main/exercises/sql/basics
