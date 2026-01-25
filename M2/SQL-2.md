@@ -214,9 +214,9 @@ Give all possible combinations of **bars** and **drinkers named John**.
 
 ## Exercise 9 – Reasoning about joins (no SQL)
 
-Answer the following questions in plain text:
+Answer the following questions:
 
-1. Why is a `CROSS JOIN` usually dangerous in practice?
+1. Why might a `CROSS JOIN` be dangerous in practice?
 2. When is a `NATURAL JOIN` risky to use?
 3. Why is it often preferable to use explicit join conditions (`JOIN ... ON`)?
 
