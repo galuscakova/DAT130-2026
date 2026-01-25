@@ -15,6 +15,56 @@ These exercises are based on the **NewToy** database introduced in the lecture.
 
 Assume that all foreign key constraints described in the slides hold.
 
+## Create tables
+
+```sql
+use toydb;
+
+CREATE TABLE Drinkers (
+    name  VARCHAR(50) PRIMARY KEY,
+    addr  VARCHAR(50),
+    phone VARCHAR(20)
+);
+
+CREATE TABLE Beers (
+    name VARCHAR(50) PRIMARY KEY,
+    manf VARCHAR(50)
+);
+
+CREATE TABLE Bars (
+    name     VARCHAR(50) PRIMARY KEY,
+    addr     VARCHAR(50),
+    license  INTEGER,
+    openDate DATE
+);
+
+CREATE TABLE Likes (
+    drinker VARCHAR(50),
+    beer    VARCHAR(50),
+    PRIMARY KEY (drinker, beer),
+    FOREIGN KEY (drinker) REFERENCES Drinkers(name),
+    FOREIGN KEY (beer)    REFERENCES Beers(name)
+);
+
+CREATE TABLE Sells (
+    bar   VARCHAR(50),
+    beer  VARCHAR(50),
+    price DECIMAL(4,2) CHECK (price > 0),
+    PRIMARY KEY (bar, beer),
+    FOREIGN KEY (bar)  REFERENCES Bars(name),
+    FOREIGN KEY (beer) REFERENCES Beers(name)
+);
+
+CREATE TABLE Frequents (
+    drinker VARCHAR(50),
+    bar     VARCHAR(50),
+    PRIMARY KEY (drinker, bar),
+    FOREIGN KEY (drinker) REFERENCES Drinkers(name),
+    FOREIGN KEY (bar)     REFERENCES Bars(name)
+);
+```
+
+
 ---
 
 ## Exercise 1 – Simple join
