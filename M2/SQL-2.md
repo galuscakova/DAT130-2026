@@ -143,7 +143,7 @@ INSERT INTO Frequents (drinker, bar) VALUES
 
 ---
 
-## Exercise 1 – Simple join
+## Exercise 1 – Simple select
 
 Give the names of the beers sold by **Coogee Bay Hotel** together with their prices.
 
@@ -151,7 +151,7 @@ Give the names of the beers sold by **Coogee Bay Hotel** together with their pri
 
 ---
 
-## Exercise 2 – Join with selection
+## Exercise 2 – Select with selection
 
 Give the names of the bars that sell **Victoria Bitter** for less than 2.50.
 
