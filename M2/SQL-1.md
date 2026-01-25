@@ -41,9 +41,9 @@ Insert departments
 
 ``` sql
 INSERT INTO department (ID, name) VALUES 
-    (0, "Engineering"),
-    (1, "HR"), 
-    (2, "Engineering");
+    (0, 'Engineering'),
+    (1, 'HR'), 
+    (2, 'Engineering');
 ```
 
 Insert empoyees
@@ -51,9 +51,9 @@ Insert empoyees
 ``` sql
 INSERT INTO employee (ID, name, salary, departmentID) 
 VALUES 
-    (1234, "Tom", 50.000, 0),
-    (1235, "Bjørn", NULL, 1),
-    (1345, "Ida", 60.000,  0);
+    (1234, 'Tom', 50.000, 0),
+    (1235, 'Bjørn', NULL, 1),
+    (1345, 'Ida', 60.000,  0);
 ```
 
 Check data empoyees
@@ -67,7 +67,7 @@ SELECT * FROM employee;
 
     2.1 Insert a new employee into the database.
 
-    2.2 Write an update to change the department of employee Bjørn to 2.
+    2.2 Write an update to change the department of employee Tom to 2.
 
     2.3 DELETE employee Tom.
 
