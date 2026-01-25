@@ -64,6 +64,82 @@ CREATE TABLE Frequents (
 );
 ```
 
+## Fill the tables with data
+
+```sql
+INSERT INTO Bars (name, addr, license, openDate) VALUES
+('Australia Hotel', 'The Rocks', 123456, '1940-12-01'),
+('Coogee Bay Hotel', 'Coogee', 966500, '1980-08-31'),
+('Lord Nelson', 'The Rocks', 123888, '1920-11-11'),
+('Marble Bar', 'Sydney', 122123, '2001-04-01'),
+('Regent Hotel', 'Kingsford', 987654, '2000-02-29'),
+('Rose Bay Hotel', 'Rose Bay', 966410, '2000-08-31'),
+('Royal Hotel', 'Randwick', 938500, '1986-06-26');
+
+INSERT INTO Drinkers (name, addr, phone) VALUES
+('Adam', 'Randwick', '9385-4444'),
+('Gernot', 'Newtown', '9415-3378'),
+('John', 'Clovelly', '9665-1234'),
+('Justin', 'Mosman', '9845-4321'),
+('Marie', 'Rose Bay', '9371-2126'),
+('Adrian', 'Redfern', '9371-1244');
+
+INSERT INTO Beers (name, manf) VALUES
+('80/-', 'Caledonian'),
+('Bigfoot Barley Wine', 'Sierra Nevada'),
+('Burragorang Bock', 'George IV'),
+('Crown Lager', 'Carlton'),
+('Fosters Lager', 'Carlton'),
+('New', 'Toohey’s'),
+('Old', 'Toohey’s'),
+('Old Admiral', 'Lord Nelson'),
+('Pale Ale', 'Sierra Nevada'),
+('Premium Lager', 'Cascade'),
+('Red', 'Toohey’s'),
+('Sheaf Stout', 'Toohey’s'),
+('Sparkling Ale', 'Cooper’s'),
+('Stout', 'Cooper’s'),
+('Three Sheets', 'Lord Nelson'),
+('Victoria Bitter', 'Carlton');
+
+INSERT INTO Likes (drinker, beer) VALUES
+('Adam', 'Crown Lager'),
+('Adam', 'Fosters Lager'),
+('Adam', 'New'),
+('Gernot', 'Premium Lager'),
+('Gernot', 'Sparkling Ale'),
+('John', '80/-'),
+('John', 'Bigfoot Barley Wine'),
+('John', 'Pale Ale'),
+('John', 'Three Sheets'),
+('Justin', 'Sparkling Ale'),
+('Justin', 'Victoria Bitter');
+
+INSERT INTO Sells (bar, beer, price) VALUES
+('Australia Hotel', 'Burragorang Bock', 3.50),
+('Australia Hotel', 'Old Admiral', 3.75),
+('Australia Hotel', 'Three Sheets', 3.75),
+('Coogee Bay Hotel', 'New', 2.30),
+('Coogee Bay Hotel', 'Old', 2.50),
+('Coogee Bay Hotel', 'Sparkling Ale', 2.80),
+('Coogee Bay Hotel', 'Victoria Bitter', 2.30),
+('Marble Bar', 'New', 2.80),
+('Marble Bar', 'Old', 2.80),
+('Marble Bar', 'Victoria Bitter', 2.80),
+('Regent Hotel', 'Victoria Bitter', 2.20),
+('Royal Hotel', 'Victoria Bitter', 2.30);
+
+INSERT INTO Frequents (drinker, bar) VALUES
+('Adam', 'Coogee Bay Hotel'),
+('Gernot', 'Lord Nelson'),
+('John', 'Coogee Bay Hotel'),
+('John', 'Lord Nelson'),
+('John', 'Australia Hotel'),
+('Justin', 'Regent Hotel'),
+('Justin', 'Marble Bar'),
+('Marie', 'Rose Bay Hotel');
+```
+
 
 ---
 
