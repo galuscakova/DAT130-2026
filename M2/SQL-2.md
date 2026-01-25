@@ -151,7 +151,7 @@ Give the names of the beers sold by **Coogee Bay Hotel** together with their pri
 
 ---
 
-## Exercise 2 – Select with selection
+## Exercise 2 – Query with selection
 
 Give the names of the bars that sell **Victoria Bitter** for less than 2.50.
 
