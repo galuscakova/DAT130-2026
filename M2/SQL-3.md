@@ -36,11 +36,9 @@ Give the beers that are sold for less than $3 and are not liked by Justin.
 
 Give the name and manufacturer of beers that are liked by John.
 
-### Exercise B2 – Scalar vs relation result
+### Exercise B2 – IN (Non‑correlated subquery)
 
 Give the bars that sell New at the same price as Victoria Bitter is sold at Coogee Bay Hotel.
-
-Hint: Think about what happens if the subquery returns more than one tuple.
 
 ### Exercise B3 – Correlated subquery
 
