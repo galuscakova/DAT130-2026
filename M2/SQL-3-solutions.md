@@ -96,20 +96,6 @@ WHERE f2.Drinker = f1.Drinker
 
 ---
 
-### Solution B4 – Minimum per group
-
-```sql
-SELECT Bar, Beer, Price
-FROM Sells s1
-WHERE Price IN (
-    SELECT MIN(Price)
-    FROM Sells s2
-    WHERE s1.Bar = s2.Bar
-);
-```
-
----
-
 ## Part C – Aggregation
 
 ### Solution C1 – Average
