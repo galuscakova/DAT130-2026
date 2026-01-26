@@ -42,7 +42,7 @@ Give the bars that sell New at the same price as Victoria Bitter is sold at Coog
 
 ### Exercise B3 – Correlated subquery
 
-Give the names of drinkers who frequent at least one bar.
+Give the names of drinkers who frequent at least two bars.
 
 ### Exercise B4 – Minimum per group
 
