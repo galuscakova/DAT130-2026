@@ -66,7 +66,7 @@ WHERE Name IN (
 
 ---
 
-### Solution B2 – Scalar vs relation result
+### Solution B2 – IN (Non‑correlated subquery)
 
 ```sql
 SELECT Bar
