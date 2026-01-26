@@ -166,23 +166,3 @@ FROM Sells s NATURAL JOIN Frequents f
 GROUP BY Bar
 HAVING COUNT(DISTINCT s.Beer) > 2;
 ```
-
----
-
-## Part E – Empty Values (NULL)
-
-### Solution E1 – Comparison with NULL
-
-```sql
-SELECT *
-FROM R
-WHERE Mark <> 90
-   OR Mark IS NULL;
-```
-
----
-
-### Solution E2 – COUNT and NULL
-
-* `COUNT(*)` counts all tuples, including those with `NULL` values.
-* `COUNT(Mark)` counts only tuples where `Mark` is not `NULL`.
