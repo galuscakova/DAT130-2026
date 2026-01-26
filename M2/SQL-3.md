@@ -77,30 +77,3 @@ For each bar selling more than two different beers, give:
 * the bar name
 * the number of different beers it sells
 * the number of different drinkers who frequent it
-
-## Part E – Empty Values (NULL)
-
-Assume the relation:
-```sql
-R(StuId, Mark, Course)
-```
-
-Assume that some tuples may have Mark = NULL.
-
-### Exercise E1 – Comparison with NULL
-
-Give all tuples corresponding to students who got a mark different from 90, including students who did not receive a mark.
-
-### Exercise E2 – COUNT and NULL
-
-Explain the difference between the following two queries:
-
-```sql
-SELECT COUNT(*) FROM R;
-```
-
-and
-
-```sql
-SELECT COUNT(Mark) FROM R;
-```
