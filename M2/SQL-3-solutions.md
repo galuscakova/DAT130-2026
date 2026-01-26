@@ -85,12 +85,12 @@ WHERE Beer = 'New'
 ### Solution B3 – Correlated subquery
 
 ```sql
-SELECT Name
-FROM Drinkers d
-WHERE EXISTS (
-    SELECT *
-    FROM Frequents f
-    WHERE f.Drinker = d.Name
+SELECT DISTINCT f1.Drinker
+FROM Frequents f1
+WHERE 2 <= (
+SELECT COUNT(DISTINCT f2.Bar)
+FROM Frequents f2
+WHERE f2.Drinker = f1.Drinker
 );
 ```
 
