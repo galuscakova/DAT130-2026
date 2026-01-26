@@ -45,7 +45,7 @@ WHERE Price < 3
 EXCEPT
 SELECT Beer
 FROM Likes
-WHERE Drinker = 'John';
+WHERE Drinker = 'Justin';
 ```
 
 ---
