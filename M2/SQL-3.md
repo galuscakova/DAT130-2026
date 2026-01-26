@@ -28,7 +28,7 @@ Give all (Drinker, Beer) pairs such that the drinker likes a beer and frequents 
 
 ### Exercise A3 – EXCEPT
 
-Give the beers that are sold for less than $3 and are not liked by John.
+Give the beers that are sold for less than $3 and are not liked by Justin.
 
 ## Part B – Embedded Queries
 
