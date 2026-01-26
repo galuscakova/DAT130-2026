@@ -84,7 +84,7 @@ For each bar selling more than two different beers, give:
 * the number of different beers it sells
 * the number of different drinkers who frequent it
 
-### Part E – Empty Values (NULL)
+## Part E – Empty Values (NULL)
 
 Assume the relation:
 ```sql
