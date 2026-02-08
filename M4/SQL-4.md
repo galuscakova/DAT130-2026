@@ -95,14 +95,10 @@ Write CREATE TABLE statements.
 
 ## Part G -- BCNF
 
-### G.1
-
 Check whether your 3NF design is already BCNF.
 If not, fix it.
 
 ## Part H -- Implementation
-
-Part H — Implementation
 
 Create the final normalized schema and insert the original data.
 
