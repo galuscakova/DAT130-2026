@@ -40,10 +40,6 @@ Give the name and manufacturer of beers that are liked by John.
 
 Give the bars that sell New at the same price as Victoria Bitter is sold at Coogee Bay Hotel.
 
-### Exercise B3 – Correlated subquery
-
-Give the names of drinkers who frequent at least two bars.
-
 ## Part C – Aggregation
 
 ### Exercise C1 – Simple aggregation
