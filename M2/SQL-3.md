@@ -1,16 +1,5 @@
 We will use the tables created in [SQL-2](https://github.com/galuscakova/DAT130-2026/blob/cb7cddafd624c0a3cfc1d4fe35d6f234e43b2883/M2/SQL-2.md).
 
-The schema is as follows:
-```sql
-Drinkers(Name, Addr)
-Bars(Name, Addr)
-Beers(Name, Manf)
-Likes(Drinker, Beer)
-Frequents(Drinker, Bar)
-Sells(Bar, Beer, Price)
-```
-
-
 ## Part A – Set Operations
 
 ### Exercise A1 – UNION vs UNION ALL
