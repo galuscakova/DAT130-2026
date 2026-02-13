@@ -185,7 +185,7 @@ COMMIT;
 
 What happens to Session B?
 
-### Part 5 – Thinking questions
+### Part E – Thinking questions
 
 Answer briefly:
 - What does Atomicity guarantee?
