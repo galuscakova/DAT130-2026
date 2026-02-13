@@ -5,9 +5,7 @@ Run the following scripts first.
 Create the tables:
 
 ```sql
-DROP DATABASE IF EXISTS dat130_indexes;
-CREATE DATABASE dat130_indexes;
-USE dat130_indexes;
+USE indexToyDB;
 
 -- Users table (Instagram style)
 CREATE TABLE users (
@@ -43,44 +41,47 @@ CREATE TABLE orders (
 Insert test data:
 
 ```sql
-INSERT INTO users(username,email,country,created_at)
-SELECT 
-    CONCAT('user', x),
-    CONCAT('user', x, '@mail.com'),
-    ELT(1 + FLOOR(RAND()*5), 'Norway','Sweden','Denmark','Germany','France'),
-    DATE('2020-01-01') + INTERVAL FLOOR(RAND()*1500) DAY
-FROM (
-    SELECT @row := @row + 1 AS x
-    FROM information_schema.tables, (SELECT @row := 0) r
-    LIMIT 20000
-) t;
+SET SESSION cte_max_recursion_depth = 200000;
 
-
-INSERT INTO posts(user_id,title,body,likes,created_at)
+INSERT INTO users (username,email,country,created_at)
+WITH RECURSIVE seq AS (
+  SELECT 1 AS n
+  UNION ALL
+  SELECT n+1 FROM seq WHERE n < 20000
+)
 SELECT
-    FLOOR(1 + RAND()*20000),
-    CONCAT('Post about SQL ', x),
-    'MySQL indexing is super important for performance',
-    FLOOR(RAND()*500),
-    DATE('2021-01-01') + INTERVAL FLOOR(RAND()*1200) DAY
-FROM (
-    SELECT @row2 := @row2 + 1 AS x
-    FROM information_schema.tables, (SELECT @row2 := 0) r
-    LIMIT 50000
-) t;
+  CONCAT('user', n),
+  CONCAT('user', n, '@mail.com'),
+  ELT(1 + FLOOR(RAND()*5),'Norway','Sweden','Denmark','Germany','France'),
+  DATE('2020-01-01') + INTERVAL FLOOR(RAND()*365) DAY
+FROM seq;
 
-
-INSERT INTO orders(user_id,amount,status,order_date)
+INSERT INTO posts (user_id,title,body,likes,created_at)
+WITH RECURSIVE seq AS (
+  SELECT 1 AS n
+  UNION ALL
+  SELECT n+1 FROM seq WHERE n < 10
+)
 SELECT
-    FLOOR(1 + RAND()*20000),
-    ROUND(RAND()*5000,2),
-    ELT(1 + FLOOR(RAND()*3),'pending','paid','cancelled'),
-    DATE('2022-01-01') + INTERVAL FLOOR(RAND()*900) DAY
-FROM (
-    SELECT @row3 := @row3 + 1 AS x
-    FROM information_schema.tables, (SELECT @row3 := 0) r
-    LIMIT 80000
-) t;
+  FLOOR(1 + RAND()*20000),
+  CONCAT('Post ', n),
+  'Indexing improves performance',
+  FLOOR(RAND()*500),
+  DATE('2021-01-01') + INTERVAL FLOOR(RAND()*365) DAY
+FROM seq;
+
+INSERT INTO orders (user_id,amount,status,order_date)
+WITH RECURSIVE seq AS (
+  SELECT 1 AS n
+  UNION ALL
+  SELECT n+1 FROM seq WHERE n < 10
+)
+SELECT
+  FLOOR(1 + RAND()*20000),
+  ROUND(RAND()*1000,2),
+  ELT(1 + FLOOR(RAND()*3),'paid','pending','cancelled'),
+  DATE('2022-01-01') + INTERVAL FLOOR(RAND()*365) DAY
+FROM seq;
 ```
 
 ## Exercise A -- No indexes
@@ -123,7 +124,7 @@ Run A.2 again
 
 Compare rows scanned before/after
 
-## Exercise 3 -- Composite indexes
+## Exercise C -- Composite indexes
 
 We often search:
 
@@ -131,17 +132,16 @@ We often search:
 SELECT * FROM orders 
 WHERE user_id = 100 AND status = 'paid';
 ```
-### 3.1
+
+### C.1
 Run EXPLAIN without index
 
-### 3.2
+### C.2
 Create a composite index
 
 Run EXPLAIN again
 
-Which index order works best?
-
-## Exercise 4 -- Range queries
+## Exercise D -- Range queries
 
 Find expensive orders:
 
@@ -150,26 +150,24 @@ SELECT * FROM orders
 WHERE amount BETWEEN 4000 AND 4500;
 ```
 
-Does an index help?
+Create an index for this and test
 
-Create one and test
-
-## Exercise 5 -- FULLTEXT search
+## Exercise E -- FULLTEXT search
 
 Search posts containing the word “performance”.
 
-### 5.1
-Try with LIKE
+### E.1
+Search for it using LIKE
 
-### 5.2
+### E.2
 
 Create FULLTEXT index
 
-Use MATCH ... AGAINST
+Use MATCH ... AGAINST for searching
 
 Compare speed
 
-## Exercise 6 -- Index inspection
+## Exercise F -- Index inspection
 
 Use:
 
@@ -180,10 +178,10 @@ SHOW INDEX FROM users;
 Explain:
 
 - Cardinality
-- Key_len
+- Index_type
 - Non_unique
 
-## Exercise 7 -- Query optimizer hints
+## Exercise G -- Query optimizer hints
 
 Force MySQL to use an index even if it doesn’t want to.
 
@@ -192,11 +190,9 @@ Use:
 - USE INDEX
 - FORCE INDEX
 
-Test on the orders table.
+And run it on the orders table.
 
-What differences do you observe?
-
-# Exercise 8 -- Partitioning
+# Exercise H -- Partitioning
 
 Create a partitioned copy of orders by year of order_date using RANGE partitioning.
 
