@@ -192,7 +192,7 @@ Use:
 
 And run it on the orders table.
 
-# Exercise H -- Partitioning
+## Exercise H -- Partitioning
 
 Create a partitioned copy of orders by year of order_date using RANGE partitioning.
 
