@@ -36,7 +36,7 @@ COMMIT
 
 Check balances before and after.
 
-## Task A.2 – Undo changes
+### Task A.2 – Undo changes
 
 Repeat Task 1.1 but use ROLLBACK instead of COMMIT.
 
