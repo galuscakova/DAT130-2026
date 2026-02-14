@@ -4,6 +4,8 @@ File → New Query Tab
 
 Each tab = one independent database session.
 
+Also, first turn off autommit in MySQL (uncheck Query->Auto-Commit Transactions)
+
 ## Setup 
 
 
