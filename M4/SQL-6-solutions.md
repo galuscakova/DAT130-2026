@@ -92,3 +92,21 @@ Dirty reads prevented.
 
 ### C.3
 
+Yes, value changes.
+
+First read: 500
+Second read: 999
+
+READ COMMITTED allows non-repeatable reads.
+
+## Part D
+
+The query is executing, but is not finished until the Commit.
+
+## Part E
+
+- Atomicity → all or nothing
+- COMMIT saves permanently, ROLLBACK undoes
+- SERIALIZABLE
+- Too slow, heavy locking
+- Banking, payments, ticket booking, inventory systems
