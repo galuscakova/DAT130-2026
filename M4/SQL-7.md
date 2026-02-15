@@ -3,8 +3,6 @@
 Run First
 
 ```sql
-DROP DATABASE IF EXISTS unibook;
-CREATE DATABASE unibook;
 USE unibook;
 
 CREATE TABLE students (
