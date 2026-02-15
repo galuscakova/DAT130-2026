@@ -45,8 +45,8 @@ INSERT INTO enrollments VALUES
 
 ## Part A – Access Control
 
-⚠ These tasks must be run as a user with permission to create users (e.g. root).
-[Instructions](https://dev.mysql.com/doc/mysql-getting-started/en/)
+⚠ These tasks must be run as a user with permission to create users (e.g. root).\
+[Instructions](https://dev.mysql.com/doc/mysql-getting-started/en/)\
 I will thus run the commands inside of the command line instead of MySQL Workbench.
 
 ### Task A.1 – Create User
