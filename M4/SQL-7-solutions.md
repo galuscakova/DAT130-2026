@@ -7,6 +7,16 @@
 CREATE USER 'intern'@'localhost' IDENTIFIED BY 'intern123';
 ```
 
+You might need to change the validate_password.policy.\
+Check the current value:
+```sql
+SHOW VARIABLES LIKE 'validate_password%';
+```
+and possibly change the value
+```sql
+SET GLOBAL validate_password.policy=LOW;
+```
+
 ### Task A.2 – Grant Minimal Access
 
 ```sql
