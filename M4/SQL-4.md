@@ -25,7 +25,6 @@ INSERT INTO enrollment_raw VALUES
 
 ## Exercise A -- Anomalies
 
-### A1
 Learn about different anomalies which might occur in the databases if the schema is not normalized:
 [anomalies link](https://www.geeksforgeeks.org/dbms/introduction-of-database-normalization/).
 
@@ -93,12 +92,7 @@ Further decompose to reach 3NF.
 
 Write CREATE TABLE statements.
 
-## Part G -- BCNF
-
-Check whether your 3NF design is already BCNF.
-If not, fix it.
-
-## Part H -- Implementation
+## Part G -- Implementation
 
 Create the final normalized schema and insert the original data.
 
