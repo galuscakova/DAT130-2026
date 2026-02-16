@@ -99,7 +99,7 @@ CREATE TABLE enrollments (
 
 Transitive:
 
-course_id → instructor_id
+course_id → instructor_id\
 instructor_id → instructor_name, instructor_office
 
 ### F.2
