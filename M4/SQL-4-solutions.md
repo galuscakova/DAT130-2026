@@ -82,7 +82,9 @@ CREATE TABLE students (
 CREATE TABLE courses (
     course_id INT PRIMARY KEY,
     course_title VARCHAR(100),
-    instructor_id INT
+    instructor_id INT,
+    instructor_name VARCHAR(100),
+    instructor_office VARCHAR(50)
 );
 
 CREATE TABLE enrollments (
