@@ -121,21 +121,7 @@ CREATE TABLE courses (
 );
 ```
 
-## Exercise G -- BCNF
-
-All determinants are keys:
-
-students(student_id)
-
-instructors(instructor_id)
-
-courses(course_id)
-
-enrollments(student_id, course_id)
-
-→ Already BCNF
-
-## Exercise H -- Final Schema (BCNF)
+## Exercise G -- Final Schema (BCNF)
 
 ```sql
 CREATE TABLE students (
