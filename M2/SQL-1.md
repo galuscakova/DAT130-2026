@@ -1,9 +1,9 @@
 # SQL exercises, Part I. (create and select)
 
 ### Install and use MySQL Workbench
-[Instructions for Windows](https://github.com/galuscakova/DAT130-2026/blob/bc32b2962ebb9055f136cdafb9d7b11929b0765a/M2/Installation-guides/Install%20MySQL%20for%20Windows.docx)
+[Instructions for Windows](https://github.com/galuscakova/DAT130-2026/blob/f7409423ff364a6e002339438feec928e4dbcf16/M2/Installation-guides/Install%20MySQL%20for%20Windows.docx)
 
-[Instructions for MacOS](https://github.com/galuscakova/DAT130-2026/blob/bc32b2962ebb9055f136cdafb9d7b11929b0765a/M2/Installation-guides/Install%20MySQL%20for%20macOS.docx)
+[Instructions for MacOS](https://github.com/galuscakova/DAT130-2026/blob/f7409423ff364a6e002339438feec928e4dbcf16/M2/Installation-guides/Install%20MySQL%20for%20macOS.docx)
 
 [Instructions for Linux](https://github.com/galuscakova/DAT130-2026/blob/bc32b2962ebb9055f136cdafb9d7b11929b0765a/M2/Installation-guides/Install%20MySQL%20for%20Linux.docx)
 
