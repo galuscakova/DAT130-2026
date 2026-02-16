@@ -66,7 +66,7 @@ CREATE TABLE students (
 
 Partial dependencies:
 
-student_id → student_name
+student_id → student_name\
 course_id → course_title, instructor_id
 
 Not fully dependent on whole key → violates 2NF.
