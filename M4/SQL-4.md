@@ -1,4 +1,4 @@
-In the exercisese, we will work with the following table:
+In the exercises, we will work with the following table:
 
 ```sql
 DROP DATABASE IF EXISTS normalization_practice;
