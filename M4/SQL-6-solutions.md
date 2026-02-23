@@ -106,7 +106,7 @@ The query is executing, but is not finished until the Commit.
 ## Part E
 
 - Atomicity → all or nothing
-- COMMIT saves permanently, ROLLBACK undoes
-- SERIALIZABLE
-- Too slow, heavy locking
+- Use SAVEPOINT when you need to roll back part of a transaction after an error or conditional failure without aborting the entire transaction.
+- Repeatable Read
+- SERIALIZABLE is slower because it enforces full serial equivalence by introducing additional locking or conflict detection that increases blocking, contention, and transaction aborts.
 - Banking, payments, ticket booking, inventory systems
