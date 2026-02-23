@@ -89,7 +89,7 @@ What is Alice’s final balance?
 ## Part C – Isolation levels
 
 IMPORTANT:
-Open TWO query tabs in Workbench.
+Open TWO instances in Workbench.
 
 Tab 1 = Session A\
 Tab 2 = Session B
