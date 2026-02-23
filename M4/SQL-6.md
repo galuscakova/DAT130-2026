@@ -1,8 +1,7 @@
-When the instructions say Session A / Session B
-Open:
-File → New Query Tab
+When the instructions say Session A / Session B open two instances of MySQL Workbench and work in each of them separately.\
+You can verify this by using SELECT CONNECTION_ID(); which should display different connection id in each instance.
 
-Each tab = one independent database session.
+Each MySQL Workbench instance = one independent database session.
 
 Also, first turn off autommit in MySQL (uncheck Query->Auto-Commit Transactions)
 
