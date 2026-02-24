@@ -7,6 +7,13 @@
 CREATE USER 'intern'@'localhost' IDENTIFIED BY 'intern123';
 ```
 
+Explanation:\
+'intern': The username\
+'localhost': The host from which the user is allowed to connect.\
+'intern'@'localhost' means that the user can only connect from the same machine where MySQL is running.\
+IDENTIFIED BY 'intern123' sets the password for the account to intern123\
+MySQL will hash and store it internally.\
+
 You might need to change the validate_password.policy.\
 Check the current value:
 ```sql
