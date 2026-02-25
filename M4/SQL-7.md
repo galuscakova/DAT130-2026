@@ -31,7 +31,8 @@ CREATE TABLE enrollments (
 INSERT INTO students (name, email, ssn, program) VALUES
 ('Alice', 'alice@uni.no', '123-45-6789', 'Computer Science'),
 ('Bob', 'bob@uni.no', '987-65-4321', 'Data Science'),
-('Charlie', 'charlie@uni.no', '111-22-3333', 'Cyber Security');
+('Charlie', 'charlie@uni.no', '111-22-3333', 'Cyber Security'),
+('David', 'dave@uni.no', '404-22-3333', 'Databases');
 
 INSERT INTO courses (name, teacher) VALUES
 ('Databases', 'Dr. Hansen'),
@@ -40,7 +41,8 @@ INSERT INTO courses (name, teacher) VALUES
 INSERT INTO enrollments VALUES
 (1,1,'A'),
 (2,1,'B'),
-(3,2,'A');
+(3,2,'A'),
+(4,1,'C');
 ```
 
 ## Part A – Access Control
